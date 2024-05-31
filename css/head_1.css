@@ -1,0 +1,135 @@
+/* 文章页H1-H6图标样式效果 */
+h1::before, h2::before, h3::before, h4::before, h5::before, h6::before {
+    -webkit-animation: ccc 2s linear infinite;
+    animation: ccc 2s linear infinite;
+}
+
+@-webkit-keyframes ccc {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes ccc {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+#content-inner.layout h1::before {
+    color: #010b13;
+    margin-left: -1.55rem;
+    font-size: 1.3rem;
+    margin-top: -0.23rem;
+}
+
+#content-inner.layout h2::before {
+    color: #02192c;
+    margin-left: -1.35rem;
+    font-size: 1.1rem;
+    margin-top: -0.12rem;
+}
+
+#content-inner.layout h3::before {
+    color: #042744;
+    margin-left: -1.22rem;
+    font-size: 0.95rem;
+    margin-top: -0.09rem;
+}
+
+#content-inner.layout h4::before {
+    color: #05355c;
+    margin-left: -1.05rem;
+    font-size: 0.8rem;
+    margin-top: -0.09rem;
+}
+
+#content-inner.layout h5::before {
+    color: #064374;
+    margin-left: -0.9rem;
+    font-size: 0.7rem;
+    margin-top: 0.0rem;
+}
+
+#content-inner.layout h6::before {
+    color: #07518d;
+    margin-left: -0.9rem;
+    font-size: 0.66rem;
+    margin-top: 0.0rem;
+}
+
+#content-inner.layout h1:hover, #content-inner.layout h2:hover, #content-inner.layout h3:hover, #content-inner.layout h4:hover, #content-inner.layout h5:hover, #content-inner.layout h6:hover {
+    color: #49b1f5;
+}
+
+    #content-inner.layout h1:hover::before, #content-inner.layout h2:hover::before, #content-inner.layout h3:hover::before, #content-inner.layout h4:hover::before, #content-inner.layout h5:hover::before, #content-inner.layout h6:hover::before {
+        color: #49b1f5;
+        -webkit-animation: ccc 3.2s linear infinite;
+        animation: ccc 3.2s linear infinite;
+    }
+
+
+.jg-caption {
+    text-align: center !important;
+}
+
+@font-face {
+    font-family: 'caoti1';
+    src: url('./font/caoti.ttf'); /* 修改成你的字体 */
+    font-display: swap
+}
+
+
+@font-face {
+    font-family: 'kaiti';
+    src: url('./font/SanJiBangKaiJianTi-2.ttf'); /* 修改成你的字体 */
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'caoti';
+    src: url('./font/YunFengFeiYunTi-2.ttf'); /* 修改成你的字体 */
+    font-display: swap
+}
+
+h1#site-title {
+    font-family: caoti !important
+}
+
+span#subtitle {
+    font-family: caoti !important
+}
+
+a#site-name {
+    font-family: caoti !important
+}
+
+/* 页脚去色 */
+#footer {
+    background: none;
+}
+/* 使用opacity可以设置当前透明度，避免切换dark模式产生颜色单一的问题 */
+/* 文章栏变色 */
+#recent-posts > .recent-post-item, .layout_page > div:first-child:not(.recent-posts), .layout_post > #page, .layout_post > #post, .read-mode .layout_post > #post {
+    opacity: 0.9;
+}
+/* 侧边栏去色 */
+#aside-content .card-widget {
+    opacity: 0.9;
+}
+
+html {
+    cursor: url('../img/tree.png'), auto;
+}
